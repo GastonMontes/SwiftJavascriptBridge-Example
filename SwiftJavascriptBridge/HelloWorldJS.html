@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <label></br>PAGINA CARGADA!</label>
+        <script>
+            function sayHelloToSwift() {
+                var logData = {'function' : 'jsSaysHelloWorld:', 'message' : 'JS says: Hello World.', 'date' : (new Date()).getTime()}
+                webkit.messageHandlers.callbackHandler.postMessage(logData);
+            }
+        
+            function objectiveCSaysHello() {
+                var logData = {'function' : 'jsWantsToLogData:', 'message' : 'JS says: Hello from Swift recieved.', 'date' : (new Date()).getTime()}
+                webkit.messageHandlers.callbackHandler.postMessage(logData);
+            }
+        
+            sayHelloToSwift();
+        
+            </script>
+    </body>
+</html>
